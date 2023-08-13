@@ -1,4 +1,8 @@
+import 'package:blacfy/common/utils/constants.dart';
+import 'package:blacfy/common/widgets/appstyle.dart';
+import 'package:blacfy/common/widgets/custom_otn_btn.dart';
 import 'package:blacfy/common/widgets/height_spacer.dart';
+import 'package:blacfy/common/widgets/reusable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -29,6 +33,25 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 ),
               ),
               const HeightSpacer(height: 20),
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.only(left: 16.w),
+                child: ReusableText(
+                    text: "Please enter your phone number",
+                    style: appstyle(17, AppConst.kLight, FontWeight.w500)),
+              ),
+              const HeightSpacer(height: 20),
+              /* Center(
+                child: CustomTextField(),
+              ),*/
+
+              const HeightSpacer(height: 20),
+              CustomOtlnBtn(
+                  width: AppConst.kWidth * 0.9,
+                  height: AppConst.kHeight * 0.07,
+                  color: AppConst.kBkDark,
+                  color2: AppConst.kLight,
+                  text: "Send Code")
             ],
           ),
         ),

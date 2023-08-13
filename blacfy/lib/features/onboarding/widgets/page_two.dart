@@ -28,8 +28,8 @@ class PageTwo extends StatelessWidget {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const LoginPage()));
               },
-              width: AppConst.kWidth = 0.9,
-              height: AppConst.kHeight = 0.06,
+              width: AppConst.kWidth * 0.9,
+              height: AppConst.kHeight * 0.06,
               color: AppConst.kLight,
               text: "Login with a phone number")
         ],
