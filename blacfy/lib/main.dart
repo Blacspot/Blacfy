@@ -2,6 +2,7 @@
 
 import 'package:blacfy/common/utils/constants.dart';
 import 'package:blacfy/features/onboarding/pages/onboarding.dart';
+import 'package:blacfy/features/onboarding/widgets/page_two.dart';
 import 'package:blacfy/features/todo/pages/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
