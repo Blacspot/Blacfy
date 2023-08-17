@@ -17,4 +17,5 @@ class AppConst {
 
   static double kWidth = 375.w;
   static double kHeight = 812.h;
+  static double kRadius = 12.h;
 }
