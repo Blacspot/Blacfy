@@ -3,6 +3,7 @@ import 'package:blacfy/common/widgets/appstyle.dart';
 import 'package:blacfy/common/widgets/custom_text.dart';
 import 'package:blacfy/common/widgets/height_spacer.dart';
 import 'package:blacfy/common/widgets/reusable_text.dart';
+import 'package:blacfy/common/widgets/xpansion_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -154,7 +155,7 @@ class _HomePageState extends ConsumerState<HomePage>
 
             ),
 
-            HeightSpacer(height: 20),
+            const HeightSpacer(height: 20),
 
             SizedBox(
               height: AppConst.kHeight*0.3,
@@ -177,9 +178,21 @@ class _HomePageState extends ConsumerState<HomePage>
                     )
                   ] ),
               ),
-            )
+            ),
          
-           
+           const HeightSpacer(height: 20),
+
+           const XpansionTile(
+            text: "Tomorrow's Task",
+             text2: "Tomorrow's Task are shown here", 
+             children: []),
+
+              const HeightSpacer(height: 20),
+
+            XpansionTile(
+            text: DateTime.now().add(Duration(days: 2)).toString().substring(5,10),
+             text2: "Day After Tomorrow's Tasks", 
+             children: [])
 
           ]),
         )));
