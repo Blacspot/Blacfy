@@ -4,6 +4,7 @@ import 'package:blacfy/common/widgets/custom_text.dart';
 import 'package:blacfy/common/widgets/height_spacer.dart';
 import 'package:blacfy/common/widgets/reusable_text.dart';
 import 'package:blacfy/common/widgets/xpansion_tile.dart';
+import 'package:blacfy/features/todo/widgets/todo_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -175,6 +176,14 @@ class _HomePageState extends ConsumerState<HomePage>
                       color: AppConst.kBkLight,
                       height: AppConst.kHeight*0.3,
                       
+                      child:  ListView(
+                        children: const [
+                          TodoTile(
+                            start:"03:00",
+                            end :"04:00" ,
+                          )
+                        ],
+                      ),
                     )
                   ] ),
               ),
