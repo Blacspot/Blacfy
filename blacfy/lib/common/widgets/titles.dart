@@ -18,7 +18,7 @@ class BottomTitles extends StatelessWidget {
     return SizedBox(
       width: AppConst.kWidth,
       child: Padding(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -32,16 +32,16 @@ class BottomTitles extends StatelessWidget {
                     color: AppConst.kGreen),
               );
             }),
-            WidthSpacer(width: 15),
+            const WidthSpacer(width: 15),
             Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ReusableText(
                       text: text,
                       style: appstyle(24, AppConst.kLight, FontWeight.bold)),
-                  HeightSpacer(height: 10),
+                  const HeightSpacer(height: 10),
                   ReusableText(
                       text: text2,
                       style: appstyle(12, AppConst.kLight, FontWeight.bold))
