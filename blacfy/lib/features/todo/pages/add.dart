@@ -1,5 +1,6 @@
 import 'package:blacfy/common/utils/constants.dart';
 import 'package:blacfy/common/widgets/appstyle.dart';
+import 'package:blacfy/common/widgets/custom_otn_btn.dart';
 import 'package:blacfy/common/widgets/custom_text.dart';
 import 'package:blacfy/common/widgets/height_spacer.dart';
 import 'package:flutter/material.dart';
@@ -28,18 +29,53 @@ class _AddTaskState extends ConsumerState<AddTask> {
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: ListView(
           children: [
-            HeightSpacer(height: 20),
+            const HeightSpacer(height: 20),
             CustomTextField(
               hintText: "Add title",
               controller: title,
               hintStyle: appstyle(16, AppConst.kGreyLight, FontWeight.w600),
             ),
-            HeightSpacer(height: 20),
+            const HeightSpacer(height: 20),
             CustomTextField(
               hintText: "Add description",
               controller: desc,
               hintStyle: appstyle(16, AppConst.kGreyLight, FontWeight.w600),
             ),
+            const HeightSpacer(height: 20),
+            CustomOtlnBtn(
+                width: AppConst.kWidth,
+                height: 52.h,
+                color: AppConst.kLight,
+                color2: AppConst.kBlueLight,
+                text: "Set Date"),
+            const HeightSpacer(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomOtlnBtn(
+                  onTap: (){},
+                    width: AppConst.kWidth * 0.4,
+                    height: 52.h,
+                    color: AppConst.kLight,
+                    color2: AppConst.kBlueLight,
+                    text: "Start Time"),
+                CustomOtlnBtn(
+                  onTap: (){},
+                    width: AppConst.kWidth * 0.4,
+                    height: 52.h,
+                    color: AppConst.kLight,
+                    color2: AppConst.kBlueLight,
+                    text: "End Time"),
+              ],
+            ),
+            const HeightSpacer(height: 20),
+            CustomOtlnBtn(
+              onTap: (){},
+                width: AppConst.kWidth,
+                height: 52.h,
+                color: AppConst.kLight,
+                color2: AppConst.kGreen,
+                text: "Submit"),
           ],
         ),
       ),

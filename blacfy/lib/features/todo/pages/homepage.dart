@@ -5,6 +5,7 @@ import 'package:blacfy/common/widgets/height_spacer.dart';
 import 'package:blacfy/common/widgets/reusable_text.dart';
 import 'package:blacfy/common/widgets/xpansion_tile.dart';
 import 'package:blacfy/features/todo/controllers/xpansion_provider.dart';
+import 'package:blacfy/features/todo/pages/add.dart';
 import 'package:blacfy/features/todo/widgets/todo_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -54,11 +55,16 @@ class _HomePageState extends ConsumerState<HomePage>
                         width: 25.w,
                         height: 25.h,
                         decoration: const BoxDecoration(
-                          color: AppConst.kLight,
+                          color: Color.fromARGB(255, 211, 158, 158),
                           borderRadius: BorderRadius.all(Radius.circular(9)),
                         ),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const AddTask()));
+                          },
                           child: const Icon(
                             Icons.add,
                             color: AppConst.kBkDark,
