@@ -27,4 +27,48 @@ class TodoState extends _$TodoState {
         id, title, desc, isCompleted, date, startTime, endTime);
     refresh();
   }
+
+  Future<void> deleteTodo(int id) async {
+    await DBHelper.deleteItem(id);
+    refresh();
+  }
+
+  void markAsCompleted(int id, String title, String desc, int isCompleted,
+      String date, String startTime, String endTime) async {
+    await DBHelper.updateItem(id, title, desc, 1, date, startTime, endTime);
+    refresh();
+  }
+
+  String getToday() {
+    DateTime today = DateTime.now();
+    return today.toString().substring(0, 10);
+  }
+
+  String getTomorrow() {
+    DateTime tomorrow = DateTime.now().add(Duration(days: 1));
+    return tomorrow.toString().substring(0, 10);
+  }
+
+  List<String> last30days() {
+    DateTime today = DateTime.now();
+    DateTime oneMonthAgo = today.subtract(const Duration(days: 30));
+
+    List<String> dates = [];
+    for (int i = 0; i < 0; i++) {
+      DateTime date = oneMonthAgo.add(const Duration(days: 1));
+      dates.add(date.toString().substring(0, 10));
+    }
+    return dates;
+  }
+
+  bool getStatus(Task data) {
+    bool? isCompleted;
+
+    if (data.isCompleted == 0) {
+      isCompleted = false;
+    } else {
+      isCompleted = true;
+    }
+    return isCompleted;
+  }
 }
